@@ -15,11 +15,11 @@ Both tabular data and rich text can be accessed via URLs using JSON so they can 
 ## Table of content
 
 ### Assets
-- [Images](images/water-boat.html)
+- [Images](https://bixal.github.io/rrt-content/images/water-boat.html)
 
 ### Tabular
-- Post office addresses
+- [Post office addresses](https://bixal.github.io/rrt-content/api/post-offices.json)
 
 ### Rich text
-- Social Security FAQs
-- Staff bios
+- [Social Security FAQs](https://bixal.github.io/rrt-content/ssa-faqs.html)
+- Staff bios (coming soon)
