@@ -20,3 +20,6 @@ baseurl: /rrt-content
 collections:
   images:
     output: true
+  # source: https://faq.ssa.gov/en-US/
+  ssa-faqs:
+    output: true
