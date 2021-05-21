@@ -1,0 +1,10 @@
+[
+  {% for office in site.data.post-offices %}
+    {
+      "name": "{{ office.NAME }}",
+      "address": "{{ office.ADDRESS }}",
+      "city": "{{ office.CITY }}",
+    }
+    {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
