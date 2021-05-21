@@ -1,0 +1,15 @@
+---
+title: SSA FAQS
+permalink: /api/faqs.json
+---
+
+[
+  {% for item in site.ssa-faqs %}
+    {
+      "name": "{{ item.title }}",
+      "address": "{{ item.question }}",
+      "city": "{{ item.content | replace: '"', '\"'}}",
+    }
+    {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
