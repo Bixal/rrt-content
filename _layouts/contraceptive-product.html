@@ -1,0 +1,59 @@
+<!doctype html>
+
+
+
+<body>
+  
+  <main>
+    <div class="grid-container">
+
+
+    <h1 class="margin-top-0 margin-bottom-2">{{ page.title }}</h1>
+
+    <p class="text-base">Brand: {{ page.brand }} | SKU: {{ page.sku }} | Last updated: {{ page.last-updated }}</p>
+
+    <p class="margin-y-2">
+        {% assign tags = page.tags %}
+        {% for item in tags %}
+        <span class="usa-tag bg-accent-warm-light text-base-darker display-inline-block">{{ item }}</span> 
+        {% endfor %}
+    </p>
+   
+    <div class="grid-container padding-x-0">
+        <div class="grid-row">
+          <div class="tablet:grid-col tablet:padding-right-1">
+            <img src="{{ page.feature-image }}" alt="{{ page.feature-image-description }}">
+            <button class="usa-button usa-button--unstyled margin-y-2">View more images</button>
+            <button class="usa-button margin-y-2 display-block">Add to list</button>
+          </div>
+          <div class="tablet:grid-col tablet:padding-left-1">
+            <div class="usa-alert usa-alert--info usa-alert--slim margin-bottom-2" >
+                <div class="usa-alert__body">
+                  <p class="usa-alert__text">To see pricing, <a href="#">log in</a> or <a href="#">create an account</a>.</p>
+                </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+
+    <section class="maxw-tablet">
+        {{ content }}
+
+        {% assign related_products = site.products | where: "category", page.category %}
+        <h2 id="other-products">Other products in {{ page.category }}</h2>
+        <ul>
+          {% for product in related_products %}
+          {% if product.title != page.title %}
+          <li>
+            <a href="{{ site.baseurl }}{{ product.url }}">{{ product.title }}</a>
+          </li>
+          {% endif %}
+        {% endfor %}
+        </ul>
+        
+    </section>
+    
+  </div>
+  </main>

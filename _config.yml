@@ -23,3 +23,5 @@ collections:
   # source: https://faq.ssa.gov/en-US/
   ssa-faqs:
     output: true
+  contraceptive-products:
+    output: true
