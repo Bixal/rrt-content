@@ -1,19 +1,10 @@
 ---
-layout: index
-title: Water Boat
+layout: image
+title: Water boat
 source: usa.gov
 location: assets/img/waterboat.jpeg
 alt-text: overhead shot of small row boat with passengers moving across clear water, from bottom to top
-notes: "These are some notes about this image."
+notes: ""
 uses:
-    - Thing 1
-    - Thing 2
+    - https://codepen.io/bnaolu/pen/YzNoqJw
 ---
-
-# {{ page.title }}
-
-![{{ page.alt-text }}]({{ site.baseurl }}/{{ page.location }})
-
-**Alt text**: {{ page.alt-text }}
-
-**Notes**: {{ page.notes }}

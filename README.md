@@ -15,7 +15,7 @@ Both tabular data and rich text can be accessed via URLs using JSON so they can 
 ## Table of content
 
 ### Assets
-- [Images](https://bixal.github.io/rrt-content/images/water-boat.html)
+- [Images](https://bixal.github.io/rrt-content/images/)
 
 ### Tabular
 - [Post office addresses](https://bixal.github.io/rrt-content/api/post-offices.json)

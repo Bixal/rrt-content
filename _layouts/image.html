@@ -1,0 +1,23 @@
+<!doctype html>
+<html class="no-js" lang="{{site.lang}}">
+  {% include head.html %}
+  <body>
+    <main class="grid-container">
+        <h1>{{ page.title }}</h1>
+        <img src="{{ site.baseurl }}/{{ page.location }}" alt="{{ page.alt-text }}" class="maxh-card">
+        <p><strong>Alt text</strong>: {{ page.alt-text }}</p>
+        <p><strong>Source</strong>: {{ page.source }}</p>
+        <p><strong>Notes</strong>: {{ page.notes }}</p>
+        <p><strong>Uses</strong>:</p>
+        <ul>
+            {% assign items = page.uses %}
+            {% for item in items %}
+            <li>
+                <a href="{{ item }}">{{ item }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </main>
+    {% include script.html %}
+  </body>
+</html>
