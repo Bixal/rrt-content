@@ -1,25 +1,20 @@
 <!doctype html>
-
-
-
-<body>
-  
-  <main>
-    <div class="grid-container">
-
-
-    <h1 class="margin-top-0 margin-bottom-2">{{ page.title }}</h1>
-
-    <p class="text-base">Brand: {{ page.brand }} | SKU: {{ page.sku }} | Last updated: {{ page.last-updated }}</p>
-
-    <p class="margin-y-2">
+<html class="no-js" lang="{{site.lang}}">
+  {% include head.html %}
+  <body>
+    <main class="grid-container">
+      <!-- page title and meta data -->
+      <h1 class="margin-top-0 margin-bottom-2">{{ page.title }}</h1>
+      <p class="text-base">Brand: {{ page.brand }} | SKU: {{ page.sku }} | Last updated: {{ page.last-updated }}</p>
+      <!-- tags -->
+      <p class="margin-y-2">
         {% assign tags = page.tags %}
         {% for item in tags %}
-        <span class="usa-tag bg-accent-warm-light text-base-darker display-inline-block">{{ item }}</span> 
+        <span class="usa-tag bg-base-lighter text-base-darker display-inline-block">{{ item }}</span> 
         {% endfor %}
-    </p>
-   
-    <div class="grid-container padding-x-0">
+      </p>
+      <!-- image and ctas -->
+      <div class="grid-container padding-x-0">
         <div class="grid-row">
           <div class="tablet:grid-col tablet:padding-right-1">
             <img src="{{ page.feature-image }}" alt="{{ page.feature-image-description }}">
@@ -32,15 +27,36 @@
                   <p class="usa-alert__text">To see pricing, <a href="#">log in</a> or <a href="#">create an account</a>.</p>
                 </div>
             </div>
-            
+            <div class="usa-summary-box  bg-white border-base-light" role="complementary">
+              <div class="usa-summary-box__body">
+                <h3 class="usa-summary-box__heading">Product Details</h3>
+                <div class="usa-summary-box__text">
+                  <ul class="usa-list">
+                    <li>
+                      <a class="usa-summary-box__link" href="#market-insights">Market Insights</a>
+                    </li>
+                    <li>
+                      <a class="usa-summary-box__link" href="#volumetrics">Volumetrics</a>
+                    </li>
+                    <li>
+                      <a class="usa-summary-box__link" href="#logistics">Logistics</a>
+                    </li>
+                    <li>
+                      <a class="usa-summary-box__link" href="#planning-and-warehousing">Planning and Warehousing</a>
+                    </li>
+                    <li>
+                      <a class="usa-summary-box__link" href="#other-products">Other Products in Category</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
-
-    <section class="maxw-tablet">
+      <!-- content -->
+      <section class="maxw-tablet">
         {{ content }}
-
         {% assign related_products = site.products | where: "category", page.category %}
         <h2 id="other-products">Other products in {{ page.category }}</h2>
         <ul>
@@ -50,10 +66,10 @@
             <a href="{{ site.baseurl }}{{ product.url }}">{{ product.title }}</a>
           </li>
           {% endif %}
-        {% endfor %}
-        </ul>
-        
-    </section>
-    
-  </div>
-  </main>
+          {% endfor %}
+        </ul>       
+      </section>
+    </main>
+    {% include script.html %}
+  </body>
+</html>
