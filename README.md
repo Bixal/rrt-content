@@ -21,5 +21,6 @@ Both tabular data and rich text can be accessed via URLs using JSON so they can 
 - [Post office addresses](https://bixal.github.io/rrt-content/api/post-offices.json)
 
 ### Rich text
+- [Contraceptive Products](https://bixal.github.io/rrt-content/contraceptive-products/)
 - [Social Security FAQs](https://bixal.github.io/rrt-content/ssa-faqs.html)
 - Staff bios (coming soon)
