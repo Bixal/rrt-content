@@ -1,8 +1,8 @@
 # Set a plain language title for the site.
-title: Plain Vanilla GitHub Pages
+title: Bixal Rapid Response Team Content Library
 
 # Write a short description for the site. This is used for "meta description."
-description: Free, easy, low-tech website template using GitHub Pages
+description: A repo to hold a variety of content that can be used for different purposes, including pulling into templates, hosting assets, and formatting as JSON
 
 # Set the language for the site. Used for "html lang." Default is English.
 lang: en
@@ -20,8 +20,10 @@ baseurl: /rrt-content
 collections:
   images:
     output: true
-  # source: https://faq.ssa.gov/en-US/
+    # source: various
   ssa-faqs:
     output: true
+    # source: https://faq.ssa.gov/en-US/
   contraceptive-products:
     output: true
+    # source: USAID GHSC
